@@ -9,5 +9,6 @@
 
 - (void)scInsertSubview:(UIView *)view atIndex:(NSInteger)index;
 - (void)scSendSubviewToBack:(UIView *)view;
+- (void)scSetBarStyle:(UIBarStyle)barStyle;
 
 @end

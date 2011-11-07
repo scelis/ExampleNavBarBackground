@@ -14,6 +14,9 @@ int main(int argc, char *argv[])
     [SCClassUtils swizzleSelector:@selector(sendSubviewToBack:)
                           ofClass:[UINavigationBar class]
                      withSelector:@selector(scSendSubviewToBack:)];
+    [SCClassUtils swizzleSelector:@selector(setBarStyle:)
+                          ofClass:[UINavigationBar class]
+                     withSelector:@selector(scSetBarStyle:)];
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     int retVal = UIApplicationMain(argc, argv, nil, nil);

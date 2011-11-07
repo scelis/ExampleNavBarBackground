@@ -30,4 +30,17 @@
     }
 }
 
+- (void)scSetBarStyle:(UIBarStyle)barStyle {
+    [self scSetBarStyle:barStyle];
+    
+    UIView *backgroundImageView = [self viewWithTag:kSCNavigationBarBackgroundImageTag];
+    if (backgroundImageView != nil)
+    {
+        if (self.barStyle == UIBarStyleDefault)
+            backgroundImageView.hidden = NO;
+        else
+            backgroundImageView.hidden = YES;
+    }
+}
+
 @end
