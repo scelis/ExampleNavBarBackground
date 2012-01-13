@@ -3,7 +3,6 @@
  * All rights reserved.
  */
 
-#import <objc/objc-class.h>
 #import <Foundation/Foundation.h>
 
 @interface SCClassUtils : NSObject

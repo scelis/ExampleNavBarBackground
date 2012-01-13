@@ -5,6 +5,12 @@
 
 #import "SCClassUtils.h"
 
+#if OBJC_API_VERSION >= 2
+#import <objc/runtime.h>
+#else
+#import <objc/objc-class.h>
+#endif
+
 @implementation SCClassUtils
 
 + (void)swizzleSelector:(SEL)orig ofClass:(Class)c withSelector:(SEL)new;
