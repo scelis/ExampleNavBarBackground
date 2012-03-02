@@ -1,18 +1,20 @@
-/*
- * Copyright (c) 2010-2010 Sebastian Celis
- * All rights reserved.
- */
+//
+//  SCTestTableViewController.m
+//  ExampleNavBarBackground
+//
+//  Created by Sebastian Celis on 6/7/2010.
+//  Copyright 2010-2012 Sebastian Celis. All rights reserved.
+//
 
 #import "SCTestTableViewController.h"
 
 @implementation SCTestTableViewController
 
-#pragma mark -
-#pragma mark View Lifecycle
+#pragma mark - Controller Lifecycle
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    if (self = [super initWithStyle:style])
+    if ((self = [super initWithStyle:style]))
     {
         [self setTitle:@"Test Table View"];
     }
@@ -20,13 +22,14 @@
     return self;
 }
 
-- (void)dealloc
+#pragma mark - Rotation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    [super dealloc];
+    return YES;
 }
 
-#pragma mark -
-#pragma mark UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -47,8 +50,7 @@
     return cell;
 }
 
-#pragma mark -
-#pragma mark UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
