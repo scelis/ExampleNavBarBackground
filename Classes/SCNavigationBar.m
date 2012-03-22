@@ -57,7 +57,7 @@
 {
     if ([UINavigationBar instancesRespondToSelector:@selector(setBackgroundImage:forBarMetrics:)])
     {
-        [self setBackgroundImage:backgroundImage forBarMetrics:barMetrics];
+        [super setBackgroundImage:backgroundImage forBarMetrics:barMetrics];
     }
     else
     {
